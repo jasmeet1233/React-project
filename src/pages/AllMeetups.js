@@ -1,3 +1,4 @@
+import MeetupList from "../components/meetups/MeetList";
 import MeetupItem from "../components/meetups/MeetupItem";
 
 const DUMMY_DATA = [
@@ -25,9 +26,7 @@ const DUMMY_DATA = [
 function AllMeetupsPage(){
     return <div> 
         <h1>All meetups</h1>
-       {DUMMY_DATA.map((meetup)=> 
-            // {return <li key= {meetup.id}>{meetup.title}</li>})}
-            {return <MeetupItem image = {meetup.image} description = {meetup.description} address = {meetup.address} title = {meetup.title} />})}
+       <MeetupList meetupData = {DUMMY_DATA}/>
     </div>
 }
 
